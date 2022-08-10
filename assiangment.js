@@ -2,12 +2,12 @@
 
 
 function radianToDegree(radian) {
-    //error handaling
+    //error handling
     if (typeof radian != 'number') {
-        return "Input a Numeric Type Perametter"
+        return "Input a Numeric Type parameter"
     }
     //formula for rad->deg
-    let degree=radian*(180/3.14159);
+    let degree=radian*(180/Math.PI);
     return degree.toFixed(2);
 }
 
@@ -16,11 +16,11 @@ function radianToDegree(radian) {
 
 
 function isJavaScriptFile(fileName) {
-        //error handaling
+        //error handling
         if (typeof fileName != 'string') {
-            return "Input a String Type Perametter"
+            return "Input a String Type parameter"
         }
-        //checking the file extangsion
+        //checking the file extension
         if (fileName.endsWith(".js")) {
             return true;
         }else{
@@ -33,9 +33,9 @@ function isJavaScriptFile(fileName) {
 
 
 function oilPrice(diesel,petrol,octane) {
-            //error handaling
+            //error handling
             if (typeof diesel != 'number' || typeof petrol != 'number' || typeof octane != 'number') {
-                return "Input a Numeric Type Perametter"
+                return "Input a Numeric Type parameter"
             }
             //diesel price
             let dieselPrice = diesel*114;
@@ -52,15 +52,15 @@ function oilPrice(diesel,petrol,octane) {
 
 
 function publicBusFare(passangers) {
-        //error handaling
+        //error handling
         if (typeof passangers != 'number') {
-            return "Input a Numeric Type Perametter"
+            return "Input a Numeric Type parameter"
         }
         //initializing variables
     let passangersForPublicBus;
     let passangersForMicro;
     let microNeed;
-    //calculating if the passangers ammount is larger or equal then then the capacity of a bus.
+    //calculating if the passangers ammount is large or equal then the the capacity of a bus.
     if (passangers>=50) {
         let busNeed=parseInt(passangers/50);
         passangersForMicro=passangers-(50*busNeed);
@@ -71,7 +71,7 @@ function publicBusFare(passangers) {
             passangersForPublicBus=passangersForMicro;
         }
     }
-    //calculating if the passangers ammount is not larger or equal then then the capacity of a bus.
+    //calculating if the passangers ammount is not large or equal then the the capacity of a bus.
     else{
         passangersForMicro=passangers;
         if (passangersForMicro>=11) {
@@ -89,12 +89,12 @@ function publicBusFare(passangers) {
 
 
 function isBestFriend(friend1,friend2) { 
-            //error handaling
+            //error handling
             if (typeof friend1 != 'object' || Array.isArray(friend1)) {
-                return "Input a Object Type Perametter";
+                return "Input a Object Type parameter";
             }
             if ( typeof friend2 != 'object' || Array.isArray(friend2) ) {
-                return "Input a Object Type Perametter";
+                return "Input a Object Type parameter";
             }
             //checking condition
             if (friend1.name==friend2.friend && friend2.name==friend1.friend) {
